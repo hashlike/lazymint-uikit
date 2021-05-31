@@ -114,37 +114,42 @@ export const links = [
 ];
 
 export const socials = [
-  {
-    label: "Github",
-    icon: "GithubIcon",
-    href: "https://github.com/pantherswap",
-  },
+  // {
+  //   label: "Github",
+  //   icon: "GithubIcon",
+  //   href: "https://github.com/pantherswap",
+  // },
   {
     label: "Docs",
     icon: "GitbookIcon",
-    href: "https://docs.pantherswap.com",
+    href: "https://docs.lazymint.finance",
   },
+  // {
+  //   label: "Medium",
+  //   icon: "MediumIcon",
+  //   href: "https://pantherswap.medium.com",
+  // },
   {
-    label: "Medium",
-    icon: "MediumIcon",
-    href: "https://pantherswap.medium.com",
+    label: "Reddit",
+    icon: "RedditIcon",
+    href: "https://www.reddit.com/r/LazyMintOfficial/",
   },
   {
     label: "Twitter",
     icon: "TwitterIcon",
-    href: "https://twitter.com/PantherSwap",
+    href: "https://twitter.com/LazyMintFi/",
   },
   {
     label: "Telegram",
     icon: "TelegramIcon",
     items: [
       {
-        label: "English",
-        href: "https://t.me/PantherSwap",
+        label: "Announcement",
+        href: "https://t.me/LazyMintAnn",
       },
       {
-        label: "Announcements",
-        href: "https://t.me/PantherSwapAnn",
+        label: "Community",
+        href: "https://t.me/LazyMintChat",
       },
     ],
   },
