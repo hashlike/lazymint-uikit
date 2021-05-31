@@ -10,7 +10,7 @@ export const links = [
     items: [
       {
         label: "Exchange",
-        href: "https://dex.pantherswap.com",
+        href: "https://dex.pant.com",
       },
       {
         label: "Liquidity",
@@ -114,21 +114,11 @@ export const links = [
 ];
 
 export const socials = [
-  // {
-  //   label: "Github",
-  //   icon: "GithubIcon",
-  //   href: "https://github.com/pantherswap",
-  // },
   {
     label: "Docs",
     icon: "GitbookIcon",
     href: "https://docs.lazymint.finance",
   },
-  // {
-  //   label: "Medium",
-  //   icon: "MediumIcon",
-  //   href: "https://pantherswap.medium.com",
-  // },
   {
     label: "Reddit",
     icon: "RedditIcon",
