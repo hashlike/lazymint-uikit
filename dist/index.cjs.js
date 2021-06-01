@@ -2130,6 +2130,7 @@ var Logo$1 = function (_a) {
     var isAbsoluteUrl = href.startsWith("http");
     var innerLogo = (React__default['default'].createElement(React__default['default'].Fragment, null,
         React__default['default'].createElement(Icon$q, { className: "mobile-icon" }),
+        "LazyMint",
         React__default['default'].createElement(Logo, { className: "desktop-icon", isDark: isDark })));
     return (React__default['default'].createElement(Flex, null,
         React__default['default'].createElement(MenuButton, { "aria-label": "Toggle menu", onClick: togglePush, mr: "14px" }, isPushed ? (React__default['default'].createElement(Icon$M, { width: "24px", color: "textSubtle" })) : (React__default['default'].createElement(Icon$L, { width: "24px", color: "textSubtle" }))),
