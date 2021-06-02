@@ -1,6 +1,6 @@
 import React from "react";
 import getExternalLinkProps from "../../util/getExternalLinkProps";
-import StyledButton from "./StyledButton";
+import GradientStyledButton from "./GradientStyledButton";
 import { ButtonProps, variants, sizes } from "./types";
 
 const GradientButton: React.FC<ButtonProps> = ({ startIcon, endIcon, children, external, isLoading, disabled, ...props }) => {
@@ -8,7 +8,7 @@ const GradientButton: React.FC<ButtonProps> = ({ startIcon, endIcon, children, e
   const isDisabled = isLoading || disabled;
 
   return (
-    <StyledButton {...internalProps} {...props} isLoading={isLoading} disabled={isDisabled}>
+    <GradientStyledButton {...internalProps} {...props} isLoading={isLoading} disabled={isDisabled}>
       {React.isValidElement(startIcon) &&
         React.cloneElement(startIcon, {
           mr: "0.5rem",
@@ -18,7 +18,7 @@ const GradientButton: React.FC<ButtonProps> = ({ startIcon, endIcon, children, e
         React.cloneElement(endIcon, {
           ml: "0.5rem",
         })}
-    </StyledButton>
+    </GradientStyledButton>
   );
 };
 
