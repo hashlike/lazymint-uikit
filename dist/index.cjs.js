@@ -2721,7 +2721,7 @@ var UserBlock = function (_a) {
     var accountEllipsis = account ? account.substring(0, 4) + "..." + account.substring(account.length - 4) : null;
     return (React__default['default'].createElement("div", null, account ? (React__default['default'].createElement(Button, { size: "sm", variant: "tertiary", onClick: function () {
             onPresentAccountModal();
-        } }, accountEllipsis)) : (React__default['default'].createElement(Button, { size: "sm", onClick: function () {
+        } }, accountEllipsis)) : (React__default['default'].createElement(GradientButton, { size: "sm", onClick: function () {
             onPresentConnectModal();
         } }, "Connect"))));
 };
