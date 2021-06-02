@@ -28,6 +28,8 @@ const Container = styled.div`
 const PriceLink = styled.a`
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: center;
   svg {
     transition: transform 0.3s;
   }
