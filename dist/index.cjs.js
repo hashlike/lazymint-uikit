@@ -214,6 +214,29 @@ Button.defaultProps = {
     disabled: false,
 };
 
+var GradientButton = function (_a) {
+    var startIcon = _a.startIcon, endIcon = _a.endIcon, children = _a.children, external = _a.external, isLoading = _a.isLoading, disabled = _a.disabled, props = __rest(_a, ["startIcon", "endIcon", "children", "external", "isLoading", "disabled"]);
+    var internalProps = external ? getExternalLinkProps() : {};
+    var isDisabled = isLoading || disabled;
+    return (React__default['default'].createElement(StyledButton, __assign({}, internalProps, props, { isLoading: isLoading, disabled: isDisabled }),
+        React__default['default'].isValidElement(startIcon) &&
+            React__default['default'].cloneElement(startIcon, {
+                mr: "0.5rem",
+            }),
+        children,
+        React__default['default'].isValidElement(endIcon) &&
+            React__default['default'].cloneElement(endIcon, {
+                ml: "0.5rem",
+            })));
+};
+GradientButton.defaultProps = {
+    variant: variants.PRIMARY,
+    size: sizes.MD,
+    external: false,
+    isLoading: false,
+    disabled: false,
+};
+
 var IconButton = styled__default['default'](Button)(templateObject_1$3 || (templateObject_1$3 = __makeTemplateObject(["\n  padding: 0;\n  width: ", ";\n"], ["\n  padding: 0;\n  width: ", ";\n"])), function (_a) {
     var size = _a.size;
     return (size === "sm" ? "32px" : "48px");
@@ -3055,6 +3078,7 @@ exports.CopyIcon = Icon$n;
 exports.Dropdown = Dropdown;
 exports.ErrorIcon = Icon$1;
 exports.Flex = Flex;
+exports.GradientButton = GradientButton;
 exports.Heading = Heading;
 exports.HelpIcon = Icon$o;
 exports.IconButton = IconButton;
