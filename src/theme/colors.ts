@@ -32,13 +32,14 @@ export const lightColors: Colors = {
   gradients: {
     bubblegum: "linear-gradient(139.73deg, #E6FDFF 0%, #F3EFFF 100%)",
   },
+  backgroudPanel: "#FFFFFF",
 };
 
 export const darkColors: Colors = {
   ...baseColors,
   ...brandColors,
   secondary: "#e9f1fd",
-  background: "#1f2b46",
+  background: "#343135",
   backgroundDisabled: "#3c3742",
   contrast: "#FFFFFF",
   invertedContrast: "#0a0e17",
@@ -54,4 +55,5 @@ export const darkColors: Colors = {
   gradients: {
     bubblegum: "linear-gradient(139.73deg, #1f606f 0%, #164865 100%)",
   },
+  backgroudPanel: "#27262C"
 };

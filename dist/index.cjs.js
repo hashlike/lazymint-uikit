@@ -2441,7 +2441,7 @@ var StyledPanel = styled__default['default'].div(templateObject_1$E || (template
     return (showMenu ? "80px" : 0);
 }, function (_a) {
     var theme = _a.theme;
-    return theme.nav.background;
+    return theme.nav.backgroundPanel;
 }, function (_a) {
     var isPushed = _a.isPushed;
     return (isPushed ? SIDEBAR_WIDTH_FULL + "px" : 0);
@@ -2866,10 +2866,10 @@ var brandColors = {
 };
 var lightColors = __assign(__assign(__assign({}, baseColors), brandColors), { background: "#FAF9FA", backgroundDisabled: "#E9EAEB", contrast: "#191326", invertedContrast: "#FFFFFF", input: "#eeeaf4", inputBorder: "#cccccc", tertiary: "#EFF4F5", text: "#452A7A", textDisabled: "#BDC2C4", textSubtle: "#0FD5F0", borderColor: "#E9EAEB", card: "#FFFFFF", gradients: {
         bubblegum: "linear-gradient(139.73deg, #E6FDFF 0%, #F3EFFF 100%)",
-    } });
-var darkColors = __assign(__assign(__assign({}, baseColors), brandColors), { secondary: "#e9f1fd", background: "#1f2b46", backgroundDisabled: "#3c3742", contrast: "#FFFFFF", invertedContrast: "#0a0e17", input: "#483f3b", inputBorder: "#cccccc", primaryDark: "#d95b00", tertiary: "#2d2f37", text: "#FFFFFF", textDisabled: "#666171", textSubtle: "#0FD5F0", borderColor: "#524B63", card: "#121827", gradients: {
+    }, backgroudPanel: "#FFFFFF" });
+var darkColors = __assign(__assign(__assign({}, baseColors), brandColors), { secondary: "#e9f1fd", background: "#343135", backgroundDisabled: "#3c3742", contrast: "#FFFFFF", invertedContrast: "#0a0e17", input: "#483f3b", inputBorder: "#cccccc", primaryDark: "#d95b00", tertiary: "#2d2f37", text: "#FFFFFF", textDisabled: "#666171", textSubtle: "#0FD5F0", borderColor: "#524B63", card: "#121827", gradients: {
         bubblegum: "linear-gradient(139.73deg, #1f606f 0%, #164865 100%)",
-    } });
+    }, backgroudPanel: "#27262C" });
 
 var light = {
     background: lightColors.card,
@@ -2995,10 +2995,12 @@ var dark$4 = {
 
 var light$5 = {
     background: lightColors.card,
+    backgroundPanel: lightColors.card,
     hover: "#EEEAF4",
 };
 var dark$5 = {
     background: darkColors.card,
+    backgroundPanel: darkColors.backgroudPanel,
     hover: "#473d5d",
 };
 
