@@ -86,7 +86,7 @@ const PanelFooter: React.FC<Props> = ({
         ) : (
           <Skeleton width={80} height={24} />
         )}
-        <Dropdown
+        {/* <Dropdown
           position="top-right"
           target={
             <Button variant="text" startIcon={<LanguageIcon color="textSubtle" width="24px" />}>
@@ -94,7 +94,7 @@ const PanelFooter: React.FC<Props> = ({
             </Button>
           }
         >
-          {/*           
+          
           {langs.map((lang) => (
             <MenuButton
               key={lang.code}
@@ -105,8 +105,8 @@ const PanelFooter: React.FC<Props> = ({
             >
               {lang.language}
             </MenuButton>
-          ))} */}
-        </Dropdown>
+          ))}
+        </Dropdown> */}
       </SocialEntry>
       <SettingsEntry>
         {/*<Button variant="text" onClick={() => toggleTheme(!isDark)}>*/}
