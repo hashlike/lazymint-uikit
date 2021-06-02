@@ -94,6 +94,7 @@ const PanelFooter: React.FC<Props> = ({
             </Button>
           }
         >
+          {/*           
           {langs.map((lang) => (
             <MenuButton
               key={lang.code}
@@ -104,7 +105,7 @@ const PanelFooter: React.FC<Props> = ({
             >
               {lang.language}
             </MenuButton>
-          ))}
+          ))} */}
         </Dropdown>
       </SocialEntry>
       <SettingsEntry>

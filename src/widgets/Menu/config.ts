@@ -143,6 +143,11 @@ export const socials = [
       },
     ],
   },
+  {
+    label: "Medium",
+    icon: "MediumIcon",
+    href: "https://lazymint.medium.com/",
+  },
 ];
 
 export const MENU_HEIGHT = 64;
