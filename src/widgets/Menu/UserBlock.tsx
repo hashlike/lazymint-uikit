@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../../components/Button/Button";
+import GradientButton from "../../components/Button/GradientButton";
 import { useWalletModal } from "../WalletModal";
 import { Login } from "../WalletModal/types";
 
@@ -25,14 +26,14 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
           {accountEllipsis}
         </Button>
       ) : (
-        <Button
+        <GradientButton
           size="sm"
           onClick={() => {
             onPresentConnectModal();
           }}
         >
           Connect
-        </Button>
+        </GradientButton>
       )}
     </div>
   );
