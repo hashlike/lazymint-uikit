@@ -3,12 +3,12 @@ import getExternalLinkProps from "../../util/getExternalLinkProps";
 import StyledButton from "./StyledButton";
 import { ButtonProps, variants, sizes } from "./types";
 
-const Button: React.FC<ButtonProps> = ({ startIcon, endIcon, children, external, isLoading, disabled, ...props }) => {
+const Button: React.FC<ButtonProps> = ({ startIcon, endIcon, children, external, disabled, ...props }) => {
   const internalProps = external ? getExternalLinkProps() : {};
-  const isDisabled = isLoading || disabled;
+  const isDisabled = disabled;
 
   return (
-    <StyledButton {...internalProps} {...props} isLoading={isLoading} disabled={isDisabled}>
+    <StyledButton {...internalProps} {...props} disabled={isDisabled}>
       {React.isValidElement(startIcon) &&
         React.cloneElement(startIcon, {
           mr: "0.5rem",
@@ -26,7 +26,6 @@ Button.defaultProps = {
   variant: variants.PRIMARY,
   size: sizes.MD,
   external: false,
-  isLoading: false,
   disabled: false,
 };
 

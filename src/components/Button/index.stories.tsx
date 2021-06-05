@@ -55,15 +55,11 @@ export const Variants: React.FC = () => {
         </Button>
       </Row>
       <Row>
-        <Button fullWidth>Full size</Button>
+        <Button>Full size</Button>
       </Row>
       <Row>
-        <Button isLoading endIcon={<AutoRenewIcon spin color="currentColor" />}>
-          Approving
-        </Button>
-        <Button isLoading variant="success">
-          Approving
-        </Button>
+        <Button endIcon={<AutoRenewIcon spin color="currentColor" />}>Approving</Button>
+        <Button variant="success">Approving</Button>
       </Row>
       <Row>
         <Button startIcon={<LogoIcon />}>Start Icon</Button>

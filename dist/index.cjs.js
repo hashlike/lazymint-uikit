@@ -155,10 +155,15 @@ var variants = {
 };
 
 var getDisabledStyles = function (_a) {
-    var isLoading = _a.isLoading, theme = _a.theme;
-    if (isLoading === true) {
-        return "\n      &:disabled,\n      &.button--disabled {\n        cursor: not-allowed;\n      }\n    ";
-    }
+    // if (isLoading === true) {
+    //   return `
+    //     &:disabled,
+    //     &.button--disabled {
+    //       cursor: not-allowed;
+    //     }
+    //   `;
+    // }
+    var theme = _a.theme;
     return "\n    &:disabled,\n    &.button--disabled {\n      background-color: " + theme.colors.backgroundDisabled + ";\n      border-color: " + theme.colors.backgroundDisabled + ";\n      box-shadow: none;\n      color: " + theme.colors.textDisabled + ";\n      cursor: not-allowed;\n    }\n  ";
 };
 var removePointerEvents = function (_a) {
@@ -172,30 +177,24 @@ var getButtonVariantProp = function (prop) { return function (_a) {
     var theme = _a.theme, _b = _a.variant, variant = _b === void 0 ? variants.PRIMARY : _b;
     return theme.button[variant][prop];
 }; };
-var StyledButton = styled__default['default'].button(templateObject_1$2 || (templateObject_1$2 = __makeTemplateObject(["\n  align-items: center;\n  background-color: ", ";\n  border: ", ";\n  border-radius: 16px;\n  box-shadow: ", ";\n  color: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  /* max-content instead of auto for Safari fix */\n  width: ", ";\n  height: ", ";\n  line-height: 1;\n  letter-spacing: 0.03em;\n  justify-content: center;\n  outline: 0;\n  padding: ", ";\n  transition: background-color 0.2s;\n  opacity: ", ";\n\n  &:hover:not(:disabled):not(.button--disabled):not(:active) {\n    opacity: 0.8;\n  }\n\n  &:active:not(:disabled):not(.button--disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n"], ["\n  align-items: center;\n  background-color: ", ";\n  border: ", ";\n  border-radius: 16px;\n  box-shadow: ", ";\n  color: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  /* max-content instead of auto for Safari fix */\n  width: ", ";\n  height: ", ";\n  line-height: 1;\n  letter-spacing: 0.03em;\n  justify-content: center;\n  outline: 0;\n  padding: ", ";\n  transition: background-color 0.2s;\n  opacity: ", ";\n\n  &:hover:not(:disabled):not(.button--disabled):not(:active) {\n    opacity: 0.8;\n  }\n\n  &:active:not(:disabled):not(.button--disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n"])), getButtonVariantProp("background"), getButtonVariantProp("border"), getButtonVariantProp("boxShadow"), getButtonVariantProp("color"), function (_a) {
-    var fullWidth = _a.fullWidth;
-    return (fullWidth ? "100%" : "max-content");
-}, function (_a) {
+var StyledButton = styled__default['default'].button(templateObject_1$2 || (templateObject_1$2 = __makeTemplateObject(["\n  align-items: center;\n  background-color: ", ";\n  border: ", ";\n  border-radius: 16px;\n  box-shadow: ", ";\n  color: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  /* max-content instead of auto for Safari fix */\n  width: 100%;\n  height: ", ";\n  line-height: 1;\n  letter-spacing: 0.03em;\n  justify-content: center;\n  outline: 0;\n  padding: ", ";\n  transition: background-color 0.2s;\n\n  &:hover:not(:disabled):not(.button--disabled):not(:active) {\n    opacity: 0.8;\n  }\n\n  &:active:not(:disabled):not(.button--disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n"], ["\n  align-items: center;\n  background-color: ", ";\n  border: ", ";\n  border-radius: 16px;\n  box-shadow: ", ";\n  color: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  /* max-content instead of auto for Safari fix */\n  width: 100%;\n  height: ", ";\n  line-height: 1;\n  letter-spacing: 0.03em;\n  justify-content: center;\n  outline: 0;\n  padding: ", ";\n  transition: background-color 0.2s;\n\n  &:hover:not(:disabled):not(.button--disabled):not(:active) {\n    opacity: 0.8;\n  }\n\n  &:active:not(:disabled):not(.button--disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n"])), getButtonVariantProp("background"), getButtonVariantProp("border"), getButtonVariantProp("boxShadow"), getButtonVariantProp("color"), function (_a) {
     var size = _a.size;
     return (size === "sm" ? "32px" : "48px");
 }, function (_a) {
     var size = _a.size;
     return (size === "sm" ? "0 16px" : "0 24px");
-}, function (_a) {
-    var isLoading = _a.isLoading;
-    return (isLoading ? 0.5 : 1);
 }, getDisabledStyles, removePointerEvents, styledSystem.space);
 StyledButton.defaultProps = {
-    fullWidth: false,
+    // fullWidth: false,
     type: "button",
 };
 var templateObject_1$2;
 
 var Button = function (_a) {
-    var startIcon = _a.startIcon, endIcon = _a.endIcon, children = _a.children, external = _a.external, isLoading = _a.isLoading, disabled = _a.disabled, props = __rest(_a, ["startIcon", "endIcon", "children", "external", "isLoading", "disabled"]);
+    var startIcon = _a.startIcon, endIcon = _a.endIcon, children = _a.children, external = _a.external, disabled = _a.disabled, props = __rest(_a, ["startIcon", "endIcon", "children", "external", "disabled"]);
     var internalProps = external ? getExternalLinkProps() : {};
-    var isDisabled = isLoading || disabled;
-    return (React__default['default'].createElement(StyledButton, __assign({}, internalProps, props, { isLoading: isLoading, disabled: isDisabled }),
+    var isDisabled = disabled;
+    return (React__default['default'].createElement(StyledButton, __assign({}, internalProps, props, { disabled: isDisabled }),
         React__default['default'].isValidElement(startIcon) &&
             React__default['default'].cloneElement(startIcon, {
                 mr: "0.5rem",
@@ -210,15 +209,19 @@ Button.defaultProps = {
     variant: variants.PRIMARY,
     size: sizes.MD,
     external: false,
-    isLoading: false,
     disabled: false,
 };
 
 var getDisabledStyles$1 = function (_a) {
-    var isLoading = _a.isLoading, theme = _a.theme;
-    if (isLoading === true) {
-        return "\n      &:disabled,\n      &.button--disabled {\n        cursor: not-allowed;\n      }\n    ";
-    }
+    // if (isLoading === true) {
+    //   return `
+    //     &:disabled,
+    //     &.button--disabled {
+    //       cursor: not-allowed;
+    //     }
+    //   `;
+    // }
+    var theme = _a.theme;
     return "\n    &:disabled,\n    &.button--disabled {\n      background-color: " + theme.colors.backgroundDisabled + ";\n      border-color: " + theme.colors.backgroundDisabled + ";\n      box-shadow: none;\n      color: " + theme.colors.textDisabled + ";\n      cursor: not-allowed;\n    }\n  ";
 };
 var removePointerEvents$1 = function (_a) {
@@ -232,30 +235,24 @@ var getButtonVariantProp$1 = function (prop) { return function (_a) {
     var theme = _a.theme, _b = _a.variant, variant = _b === void 0 ? variants.PRIMARY : _b;
     return theme.button[variant][prop];
 }; };
-var GradientStyledButton = styled__default['default'].button(templateObject_1$3 || (templateObject_1$3 = __makeTemplateObject(["\n  align-items: center;\n  background: linear-gradient(to left, #00B1C9, #2BFBFB);  \n  border: ", ";\n  border-radius: 16px;\n  box-shadow: ", ";\n  color: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  /* max-content instead of auto for Safari fix */\n  width: ", ";\n  height: ", ";\n  line-height: 1;\n  letter-spacing: 0.03em;\n  justify-content: center;\n  outline: 0;\n  padding: ", ";\n  transition: background-color 0.2s;\n  opacity: ", ";\n\n  &:hover:not(:disabled):not(.button--disabled):not(:active) {\n    opacity: 0.8;\n  }\n\n  &:active:not(:disabled):not(.button--disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n"], ["\n  align-items: center;\n  background: linear-gradient(to left, #00B1C9, #2BFBFB);  \n  border: ", ";\n  border-radius: 16px;\n  box-shadow: ", ";\n  color: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  /* max-content instead of auto for Safari fix */\n  width: ", ";\n  height: ", ";\n  line-height: 1;\n  letter-spacing: 0.03em;\n  justify-content: center;\n  outline: 0;\n  padding: ", ";\n  transition: background-color 0.2s;\n  opacity: ", ";\n\n  &:hover:not(:disabled):not(.button--disabled):not(:active) {\n    opacity: 0.8;\n  }\n\n  &:active:not(:disabled):not(.button--disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n"])), getButtonVariantProp$1("border"), getButtonVariantProp$1("boxShadow"), getButtonVariantProp$1("color"), function (_a) {
-    var fullWidth = _a.fullWidth;
-    return (fullWidth ? "100%" : "max-content");
-}, function (_a) {
+var GradientStyledButton = styled__default['default'].button(templateObject_1$3 || (templateObject_1$3 = __makeTemplateObject(["\n  align-items: center;\n  background: linear-gradient(to left, #00b1c9, #2bfbfb);\n  border: ", ";\n  border-radius: 16px;\n  box-shadow: ", ";\n  color: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  /* max-content instead of auto for Safari fix */\n  width: 100%;\n  height: ", ";\n  line-height: 1;\n  letter-spacing: 0.03em;\n  justify-content: center;\n  outline: 0;\n  padding: ", ";\n  transition: background-color 0.2s;\n\n  &:hover:not(:disabled):not(.button--disabled):not(:active) {\n    opacity: 0.8;\n  }\n\n  &:active:not(:disabled):not(.button--disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n"], ["\n  align-items: center;\n  background: linear-gradient(to left, #00b1c9, #2bfbfb);\n  border: ", ";\n  border-radius: 16px;\n  box-shadow: ", ";\n  color: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  /* max-content instead of auto for Safari fix */\n  width: 100%;\n  height: ", ";\n  line-height: 1;\n  letter-spacing: 0.03em;\n  justify-content: center;\n  outline: 0;\n  padding: ", ";\n  transition: background-color 0.2s;\n\n  &:hover:not(:disabled):not(.button--disabled):not(:active) {\n    opacity: 0.8;\n  }\n\n  &:active:not(:disabled):not(.button--disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n"])), getButtonVariantProp$1("border"), getButtonVariantProp$1("boxShadow"), getButtonVariantProp$1("color"), function (_a) {
     var size = _a.size;
     return (size === "sm" ? "32px" : "48px");
 }, function (_a) {
     var size = _a.size;
     return (size === "sm" ? "0 16px" : "0 24px");
-}, function (_a) {
-    var isLoading = _a.isLoading;
-    return (isLoading ? 0.5 : 1);
 }, getDisabledStyles$1, removePointerEvents$1, styledSystem.space);
 GradientStyledButton.defaultProps = {
-    fullWidth: false,
+    // fullWidth: false,
     type: "button",
 };
 var templateObject_1$3;
 
 var GradientButton = function (_a) {
-    var startIcon = _a.startIcon, endIcon = _a.endIcon, children = _a.children, external = _a.external, isLoading = _a.isLoading, disabled = _a.disabled, props = __rest(_a, ["startIcon", "endIcon", "children", "external", "isLoading", "disabled"]);
+    var startIcon = _a.startIcon, endIcon = _a.endIcon, children = _a.children, external = _a.external, disabled = _a.disabled, props = __rest(_a, ["startIcon", "endIcon", "children", "external", "disabled"]);
     var internalProps = external ? getExternalLinkProps() : {};
-    var isDisabled = isLoading || disabled;
-    return (React__default['default'].createElement(GradientStyledButton, __assign({}, internalProps, props, { isLoading: isLoading, disabled: isDisabled }),
+    var isDisabled = disabled;
+    return (React__default['default'].createElement(GradientStyledButton, __assign({}, internalProps, props, { disabled: isDisabled }),
         React__default['default'].isValidElement(startIcon) &&
             React__default['default'].cloneElement(startIcon, {
                 mr: "0.5rem",
@@ -270,7 +267,6 @@ GradientButton.defaultProps = {
     variant: variants.PRIMARY,
     size: sizes.MD,
     external: false,
-    isLoading: false,
     disabled: false,
 };
 
@@ -2641,7 +2637,7 @@ var localStorageKey = "accountStatus";
 var WalletCard = function (_a) {
     var login = _a.login, walletConfig = _a.walletConfig, onDismiss = _a.onDismiss, mb = _a.mb;
     var title = walletConfig.title, Icon = walletConfig.icon;
-    return (React__default['default'].createElement(Button, { fullWidth: true, variant: "tertiary", onClick: function () {
+    return (React__default['default'].createElement(Button, { variant: "tertiary", onClick: function () {
             login(walletConfig.connectorId);
             window.localStorage.setItem(localStorageKey, "1");
             onDismiss();
