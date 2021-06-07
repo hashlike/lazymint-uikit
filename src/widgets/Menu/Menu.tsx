@@ -10,6 +10,7 @@ import UserBlock from "./UserBlock";
 import { NavProps } from "./types";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
 import Avatar from "./Avatar";
+import { Image } from "../../components/Image";
 
 const Wrapper = styled.div`
   position: relative;
@@ -59,6 +60,37 @@ const MobileOnlyOverlay = styled(Overlay)`
   ${({ theme }) => theme.mediaQueries.nav} {
     display: none;
   }
+`;
+
+const SCertik = styled.div`
+  background: white;
+  width: 300px;
+  height: 50px;
+  // position: absolute;
+  position: fixed !important;
+  right: 20px;
+  bottom: 20px;
+  z-index: 20;
+  border-radius: 16px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  &:before {
+    background: linear-gradient(to left, #21d4fd 0%, #b721ff 100%);
+    content: "ONBOARDING";
+    position: absolute;
+    top: -14px;
+    left: -20px;
+    padding: 4px 8px;
+    border-radius: 10px;
+    color: white;
+  }
+`;
+const SCertik2 = styled.div`
+  display: flex;
+  // padding: 13px 25px;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  padding-top: 12px;
 `;
 
 const Menu: React.FC<NavProps> = ({
@@ -116,6 +148,14 @@ const Menu: React.FC<NavProps> = ({
 
   return (
     <Wrapper>
+      <SCertik>
+        <SCertik2>
+          <div>Audited by</div>
+
+          <Image src="./certik-logo.png" width={100} height={24} />
+          <Image src="./check.svg" width={20} height={20} />
+        </SCertik2>
+      </SCertik>
       <StyledNav showMenu={showMenu}>
         <Logo
           isPushed={isPushed}
