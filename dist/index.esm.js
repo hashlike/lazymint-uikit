@@ -2758,6 +2758,8 @@ var MobileOnlyOverlay = styled(Overlay)(templateObject_5$1 || (templateObject_5$
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 });
+var SCertik = styled.div(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  background: white;\n  width: 300px;\n  height: 50px;\n  // position: absolute;\n  position: fixed !important;\n  right: 20px;\n  bottom: 20px;\n  z-index: 20;\n  border-radius: 16px;\n  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);\n  &:before {\n    background: linear-gradient(to left, #21d4fd 0%, #b721ff 100%);\n    content: \"ONBOARDING\";\n    position: absolute;\n    top: -14px;\n    left: -20px;\n    padding: 4px 8px;\n    border-radius: 10px;\n    color: white;\n  }\n"], ["\n  background: white;\n  width: 300px;\n  height: 50px;\n  // position: absolute;\n  position: fixed !important;\n  right: 20px;\n  bottom: 20px;\n  z-index: 20;\n  border-radius: 16px;\n  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);\n  &:before {\n    background: linear-gradient(to left, #21d4fd 0%, #b721ff 100%);\n    content: \"ONBOARDING\";\n    position: absolute;\n    top: -14px;\n    left: -20px;\n    padding: 4px 8px;\n    border-radius: 10px;\n    color: white;\n  }\n"])));
+var SCertik2 = styled.div(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  display: flex;\n  // padding: 13px 25px;\n  justify-content: space-evenly;\n  align-items: center;\n  align-content: center;\n  padding-top: 12px;\n"], ["\n  display: flex;\n  // padding: 13px 25px;\n  justify-content: space-evenly;\n  align-items: center;\n  align-content: center;\n  padding-top: 12px;\n"])));
 var Menu = function (_a) {
     var _b;
     var account = _a.account, login = _a.login, logout = _a.logout, isDark = _a.isDark, toggleTheme = _a.toggleTheme, langs = _a.langs, setLang = _a.setLang, currentLang = _a.currentLang, cakePriceUsd = _a.cakePriceUsd, cakePriceLink = _a.cakePriceLink, links = _a.links, profile = _a.profile, children = _a.children;
@@ -2797,6 +2799,11 @@ var Menu = function (_a) {
     // Find the home link if provided
     var homeLink = links.find(function (link) { return link.label === "Home"; });
     return (React.createElement(Wrapper$1, null,
+        React.createElement(SCertik, null,
+            React.createElement(SCertik2, null,
+                React.createElement("div", null, "Audited by"),
+                React.createElement(Image, { src: "./certik-logo.png", width: 100, height: 24 }),
+                React.createElement(Image, { src: "./check.svg", width: 20, height: 20 }))),
         React.createElement(StyledNav, { showMenu: showMenu },
             React.createElement(Logo$1, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
             React.createElement(Flex, null,
@@ -2807,7 +2814,7 @@ var Menu = function (_a) {
             React.createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
             React.createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" }))));
 };
-var templateObject_1$J, templateObject_2$f, templateObject_3$8, templateObject_4$3, templateObject_5$1;
+var templateObject_1$J, templateObject_2$f, templateObject_3$8, templateObject_4$3, templateObject_5$1, templateObject_6, templateObject_7;
 
 var ToastAction = function (_a) {
     var action = _a.action;
