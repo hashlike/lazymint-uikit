@@ -152,8 +152,8 @@ const Menu: React.FC<NavProps> = ({
         <SCertik2>
           <div>Audited by</div>
 
-          <Image src="./certik-logo.png" width={100} height={24} />
-          <Image src="./check.svg" width={20} height={20} />
+          <Image src="/images/certik/certik-logo.png" width={100} height={24} />
+          <Image src="/images/certik/check.svg" width={20} height={20} />
         </SCertik2>
       </SCertik>
       <StyledNav showMenu={showMenu}>
