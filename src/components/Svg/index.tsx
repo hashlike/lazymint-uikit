@@ -44,4 +44,6 @@ export { default as SyncAltIcon } from "./Icons/SyncAlt";
 export { default as WarningIcon } from "./Icons/Warning";
 export { default as AlarmIcon } from "./Icons/Alarm";
 export { default as Svg } from "./Svg";
+export { default as CertikLogo } from "./Icons/CertikLogo";
+export { default as CertikCheck } from "./Icons/CertikCheck";
 export type { SvgProps } from "./types";
