@@ -86,7 +86,6 @@ const SCertik = styled.div`
 `;
 const SCertik2 = styled.div`
   display: flex;
-  // padding: 13px 25px;
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
