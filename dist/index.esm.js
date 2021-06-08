@@ -2813,11 +2813,12 @@ var Menu = function (_a) {
     // Find the home link if provided
     var homeLink = links.find(function (link) { return link.label === "Home"; });
     return (React.createElement(Wrapper$1, null,
-        React.createElement(SCertik, null,
-            React.createElement(SCertik2, null,
-                React.createElement("div", null, "Audited by"),
-                React.createElement(Icon$J, { width: 100 }),
-                React.createElement(Icon$K, { width: 20 }))),
+        React.createElement("a", { href: "https://www.certik.org/projects/lazymint", target: "_blank" },
+            React.createElement(SCertik, null,
+                React.createElement(SCertik2, null,
+                    React.createElement("div", null, "Audited by"),
+                    React.createElement(Icon$J, { width: 100 }),
+                    React.createElement(Icon$K, { width: 20 })))),
         React.createElement(StyledNav, { showMenu: showMenu },
             React.createElement(Logo$1, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
             React.createElement(Flex, null,

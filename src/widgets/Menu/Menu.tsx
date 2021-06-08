@@ -147,13 +147,15 @@ const Menu: React.FC<NavProps> = ({
 
   return (
     <Wrapper>
-      <SCertik>
-        <SCertik2>
-          <div>Audited by</div>
-          <CertikLogo width={100} />
-          <CertikCheck width={20} />
-        </SCertik2>
-      </SCertik>
+      <a href="https://www.certik.org/projects/lazymint" target="_blank">
+        <SCertik>
+          <SCertik2>
+            <div>Audited by</div>
+            <CertikLogo width={100} />
+            <CertikCheck width={20} />
+          </SCertik2>
+        </SCertik>
+      </a>
       <StyledNav showMenu={showMenu}>
         <Logo
           isPushed={isPushed}

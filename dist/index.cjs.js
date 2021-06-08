@@ -2826,11 +2826,12 @@ var Menu = function (_a) {
     // Find the home link if provided
     var homeLink = links.find(function (link) { return link.label === "Home"; });
     return (React__default['default'].createElement(Wrapper$1, null,
-        React__default['default'].createElement(SCertik, null,
-            React__default['default'].createElement(SCertik2, null,
-                React__default['default'].createElement("div", null, "Audited by"),
-                React__default['default'].createElement(Icon$J, { width: 100 }),
-                React__default['default'].createElement(Icon$K, { width: 20 }))),
+        React__default['default'].createElement("a", { href: "https://www.certik.org/projects/lazymint", target: "_blank" },
+            React__default['default'].createElement(SCertik, null,
+                React__default['default'].createElement(SCertik2, null,
+                    React__default['default'].createElement("div", null, "Audited by"),
+                    React__default['default'].createElement(Icon$J, { width: 100 }),
+                    React__default['default'].createElement(Icon$K, { width: 20 })))),
         React__default['default'].createElement(StyledNav, { showMenu: showMenu },
             React__default['default'].createElement(Logo$1, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
             React__default['default'].createElement(Flex, null,
