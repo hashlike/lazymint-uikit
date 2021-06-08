@@ -585,7 +585,7 @@ var Icon$J = function (props) {
 };
 
 var Icon$K = function (props) {
-    return (React.createElement(Svg, __assign({ viewBox: "0 0 20 20" }, props),
+    return (React.createElement(Svg, __assign({ viewBox: "0 0 10 10" }, props),
         React.createElement("defs", null,
             React.createElement("linearGradient", { id: "linear-gradient", x1: "0.5", x2: "0.5", y2: "1", gradientUnits: "objectBoundingBox" },
                 React.createElement("stop", { offset: "0", "stop-color": "#b721ff" }),
@@ -2816,8 +2816,8 @@ var Menu = function (_a) {
         React.createElement(SCertik, null,
             React.createElement(SCertik2, null,
                 React.createElement("div", null, "Audited by"),
-                React.createElement(Icon$J, null),
-                React.createElement(Icon$K, null))),
+                React.createElement(Icon$J, { width: 100 }),
+                React.createElement(Icon$K, { width: 20 }))),
         React.createElement(StyledNav, { showMenu: showMenu },
             React.createElement(Logo$1, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
             React.createElement(Flex, null,

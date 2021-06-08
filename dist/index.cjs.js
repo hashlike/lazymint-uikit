@@ -598,7 +598,7 @@ var Icon$J = function (props) {
 };
 
 var Icon$K = function (props) {
-    return (React__default['default'].createElement(Svg, __assign({ viewBox: "0 0 20 20" }, props),
+    return (React__default['default'].createElement(Svg, __assign({ viewBox: "0 0 10 10" }, props),
         React__default['default'].createElement("defs", null,
             React__default['default'].createElement("linearGradient", { id: "linear-gradient", x1: "0.5", x2: "0.5", y2: "1", gradientUnits: "objectBoundingBox" },
                 React__default['default'].createElement("stop", { offset: "0", "stop-color": "#b721ff" }),
@@ -2829,8 +2829,8 @@ var Menu = function (_a) {
         React__default['default'].createElement(SCertik, null,
             React__default['default'].createElement(SCertik2, null,
                 React__default['default'].createElement("div", null, "Audited by"),
-                React__default['default'].createElement(Icon$J, null),
-                React__default['default'].createElement(Icon$K, null))),
+                React__default['default'].createElement(Icon$J, { width: 100 }),
+                React__default['default'].createElement(Icon$K, { width: 20 }))),
         React__default['default'].createElement(StyledNav, { showMenu: showMenu },
             React__default['default'].createElement(Logo$1, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
             React__default['default'].createElement(Flex, null,
