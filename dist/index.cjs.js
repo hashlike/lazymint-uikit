@@ -2832,13 +2832,13 @@ var Menu = function (_a) {
                 React__default['default'].createElement(UserBlock, { account: account, login: login, logout: logout }),
                 profile && React__default['default'].createElement(Avatar, { profile: profile }))),
         React__default['default'].createElement(BodyWrapper, null,
+            React__default['default'].createElement(Panel, { isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, cakePriceLink: cakePriceLink, pushNav: setIsPushed, links: links }),
             React__default['default'].createElement("a", { href: "https://www.certik.org/projects/lazymint", target: "_blank" },
                 React__default['default'].createElement(SCertik, null,
                     React__default['default'].createElement(SCertik2, null,
                         React__default['default'].createElement("div", null, "Audited by"),
                         React__default['default'].createElement(Icon$J, { width: 100 }),
                         React__default['default'].createElement(Icon$K, { width: 20 })))),
-            React__default['default'].createElement(Panel, { isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, cakePriceLink: cakePriceLink, pushNav: setIsPushed, links: links }),
             React__default['default'].createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
             React__default['default'].createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" }))));
 };

@@ -2819,13 +2819,13 @@ var Menu = function (_a) {
                 React.createElement(UserBlock, { account: account, login: login, logout: logout }),
                 profile && React.createElement(Avatar, { profile: profile }))),
         React.createElement(BodyWrapper, null,
+            React.createElement(Panel, { isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, cakePriceLink: cakePriceLink, pushNav: setIsPushed, links: links }),
             React.createElement("a", { href: "https://www.certik.org/projects/lazymint", target: "_blank" },
                 React.createElement(SCertik, null,
                     React.createElement(SCertik2, null,
                         React.createElement("div", null, "Audited by"),
                         React.createElement(Icon$J, { width: 100 }),
                         React.createElement(Icon$K, { width: 20 })))),
-            React.createElement(Panel, { isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, cakePriceLink: cakePriceLink, pushNav: setIsPushed, links: links }),
             React.createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
             React.createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" }))));
 };

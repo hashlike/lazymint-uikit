@@ -162,15 +162,6 @@ const Menu: React.FC<NavProps> = ({
         </Flex>
       </StyledNav>
       <BodyWrapper>
-        <a href="https://www.certik.org/projects/lazymint" target="_blank">
-          <SCertik>
-            <SCertik2>
-              <div>Audited by</div>
-              <CertikLogo width={100} />
-              <CertikCheck width={20} />
-            </SCertik2>
-          </SCertik>
-        </a>
         <Panel
           isPushed={isPushed}
           isMobile={isMobile}
@@ -185,6 +176,15 @@ const Menu: React.FC<NavProps> = ({
           pushNav={setIsPushed}
           links={links}
         />
+        <a href="https://www.certik.org/projects/lazymint" target="_blank">
+          <SCertik>
+            <SCertik2>
+              <div>Audited by</div>
+              <CertikLogo width={100} />
+              <CertikCheck width={20} />
+            </SCertik2>
+          </SCertik>
+        </a>
         <Inner isPushed={isPushed} showMenu={showMenu}>
           {children}
         </Inner>
