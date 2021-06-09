@@ -31,7 +31,7 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   height: ${MENU_HEIGHT}px;
   background-color: ${({ theme }) => theme.nav.backgroundPanel};
   border-bottom: solid 2px rgba(133, 133, 133, 0.1);
-  z-index: 20;
+  z-index: 999;
   transform: translate3d(0, 0, 0);
 `;
 
@@ -70,7 +70,7 @@ const SCertik = styled.div`
   position: fixed !important;
   right: 20px;
   bottom: 20px;
-  z-index: 15;
+  z-index: 20;
   border-radius: 16px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
   &:before {
