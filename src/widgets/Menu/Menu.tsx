@@ -36,6 +36,7 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
 `;
 
 const BodyWrapper = styled.div`
+  z-index: 40;
   position: relative;
   display: flex;
 `;
