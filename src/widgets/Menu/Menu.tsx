@@ -70,7 +70,7 @@ const SCertik = styled.div`
   position: fixed !important;
   right: 20px;
   bottom: 20px;
-  z-index: 50;
+  z-index: 20;
   border-radius: 16px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
   &:before {
