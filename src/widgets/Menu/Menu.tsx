@@ -31,6 +31,7 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   height: ${MENU_HEIGHT}px;
   background-color: ${({ theme }) => theme.nav.backgroundPanel};
   border-bottom: solid 2px rgba(133, 133, 133, 0.1);
+  z-index: 20;
   transform: translate3d(0, 0, 0);
 `;
 
@@ -69,7 +70,7 @@ const SCertik = styled.div`
   position: fixed !important;
   right: 20px;
   bottom: 20px;
-  z-index: 20;
+  z-index: 15;
   border-radius: 16px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
   &:before {
@@ -146,6 +147,15 @@ const Menu: React.FC<NavProps> = ({
 
   return (
     <Wrapper>
+      <a href="https://www.certik.org/projects/lazymint" target="_blank">
+        <SCertik>
+          <SCertik2>
+            <div>Audited by</div>
+            <CertikLogo width={100} />
+            <CertikCheck width={20} />
+          </SCertik2>
+        </SCertik>
+      </a>
       <StyledNav showMenu={showMenu}>
         <Logo
           isPushed={isPushed}
@@ -158,15 +168,6 @@ const Menu: React.FC<NavProps> = ({
           {profile && <Avatar profile={profile} />}
         </Flex>
       </StyledNav>
-      <a href="https://www.certik.org/projects/lazymint" target="_blank">
-        <SCertik>
-          <SCertik2>
-            <div>Audited by</div>
-            <CertikLogo width={100} />
-            <CertikCheck width={20} />
-          </SCertik2>
-        </SCertik>
-      </a>
       <BodyWrapper>
         <Panel
           isPushed={isPushed}
