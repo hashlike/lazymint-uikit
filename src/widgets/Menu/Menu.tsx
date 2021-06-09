@@ -41,6 +41,7 @@ const BodyWrapper = styled.div`
 `;
 
 const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
+  z-index: 30;
   flex-grow: 1;
   margin-top: ${({ showMenu }) => (showMenu ? `${MENU_HEIGHT}px` : 0)};
   transition: margin-top 0.2s;
@@ -54,6 +55,7 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
 `;
 
 const MobileOnlyOverlay = styled(Overlay)`
+  z-index: 50;
   position: fixed;
   height: 100%;
 
@@ -63,6 +65,7 @@ const MobileOnlyOverlay = styled(Overlay)`
 `;
 
 const SCertik = styled.div`
+  z-index: 40;
   background: white;
   width: 300px;
   height: 50px;
