@@ -36,13 +36,11 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
 `;
 
 const BodyWrapper = styled.div`
-  z-index: 40;
   position: relative;
   display: flex;
 `;
 
 const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
-  z-index: 10;
   flex-grow: 1;
   margin-top: ${({ showMenu }) => (showMenu ? `${MENU_HEIGHT}px` : 0)};
   transition: margin-top 0.2s;
@@ -72,7 +70,6 @@ const SCertik = styled.div`
   position: fixed !important;
   right: 20px;
   bottom: 20px;
-  z-index: 20;
   border-radius: 16px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
   &:before {
