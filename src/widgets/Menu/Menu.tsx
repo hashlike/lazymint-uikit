@@ -55,7 +55,7 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
 `;
 
 const MobileOnlyOverlay = styled(Overlay)`
-  z-index: 60;
+  z-index: 40;
   position: fixed;
   height: 100%;
 
