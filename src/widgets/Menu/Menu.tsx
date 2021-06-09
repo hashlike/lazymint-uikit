@@ -36,12 +36,12 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
 `;
 
 const BodyWrapper = styled.div`
-  z-index: 50;
   position: relative;
   display: flex;
 `;
 
 const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
+  z-index: 10;
   flex-grow: 1;
   margin-top: ${({ showMenu }) => (showMenu ? `${MENU_HEIGHT}px` : 0)};
   transition: margin-top 0.2s;
