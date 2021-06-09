@@ -31,7 +31,7 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   height: ${MENU_HEIGHT}px;
   background-color: ${({ theme }) => theme.nav.backgroundPanel};
   border-bottom: solid 2px rgba(133, 133, 133, 0.1);
-  z-index: 999;
+  z-index: 20;
   transform: translate3d(0, 0, 0);
 `;
 
